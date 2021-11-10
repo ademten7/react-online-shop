@@ -21,12 +21,20 @@ const Profile = () => {
   console.log(user);
   return (
     <div className="profile">
-      <h1 className="profile-header">User Profile</h1>
       {user && (
-        <div className="profile-info">
-          <img src={user.photoURL} alt="" width="300" height="300" />
-          <h3>User Name: {user.displayName}</h3>
-          <h3>User Email: {user.email}</h3>
+        <div>
+          <h1 className="profile-header">Welcome {user.displayName}</h1>
+          <div className="profile-info">
+            <img
+              className="profile-image"
+              src={user.photoURL}
+              alt=""
+              width="300"
+              height="300"
+            />
+            <h3>User Name: {user.displayName}</h3>
+            <h3>User Email: {user.email}</h3>
+          </div>
         </div>
       )}
 

@@ -4,6 +4,9 @@
 }
 
 .profile-header {
+    color: snow;
+    display: grid;
+    place-items: center;
     background-color: skyblue;
     padding: 10px;
     border-radius: 10px;
@@ -12,6 +15,7 @@
 }
 
 .profile-info {
+    color: snow;
     display: grid;
     place-items: center;
     padding: 20px;
@@ -21,8 +25,8 @@
 }
 
 .logout-button {
-    background-color: black;
-    color: whitesmoke;
+    background-color: skyblue;
+    color: snow;
     padding: 10px;
     border-radius: 30px;
     border: none;
@@ -31,4 +35,8 @@
     &:hover {
         transform: scale(1.1);
     }
+}
+
+.profile-image {
+    border-radius: 50%;
 }
