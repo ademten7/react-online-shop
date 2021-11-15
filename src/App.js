@@ -52,7 +52,7 @@ function App() {
         <div className="App container">
           <Navbar />
           <Routes>
-            {/* no need exact  and element with tag</> Routes give us exact path*/}
+            {/* no need exact keyword element with tag</> Routes give us exact path*/}
             <Route path={"/" || "/home"} element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/profile" element={<Profile />} />

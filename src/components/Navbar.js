@@ -7,7 +7,7 @@ import { FaSearch } from "react-icons/fa";
 import { GiShoppingCart } from "react-icons/gi";
 
 const Navbar = () => {
-  const { user, setUser, quantity } = useContext(MyContext);
+  const { user, quantity } = useContext(MyContext);
   return (
     <div className="container head-nav ">
       <div className="logo">

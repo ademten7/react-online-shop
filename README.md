@@ -44,3 +44,13 @@ Best wishes,
 Adem team
 
 npm install emailjs-com
+For login
+react-google-button
+https://www.npmjs.com/package/react-google-button
+
+
+
+# For deployment
+npm i firebase
+
+

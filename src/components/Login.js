@@ -10,7 +10,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   //it stay on the same page
-  onAuthStateChanged,
+  //onAuthStateChanged,
 } from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
