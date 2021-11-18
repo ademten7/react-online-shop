@@ -55,7 +55,28 @@
     }
 }
 
+.btn-pay {
+    background-color: black;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    margin: 0 auto;
+    width: 10%;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
 .product-class-name {
     text-decoration: none;
     color: rgb(5, 110, 151);
+}
+
+.payment {
+    margin-top: 2em;
+    background-color: blanchedalmond;
+    padding: 3em;
+    display: grid;
+    place-items: center;
 }

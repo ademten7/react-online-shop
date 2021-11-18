@@ -48,9 +48,24 @@ For login
 react-google-button
 https://www.npmjs.com/package/react-google-button
 
-
-
 # For deployment
+
 npm i firebase
+import React, { useContext, useEffect } from "react";
+FROM FIREBASE
+Import the functions you need from the SDKs you need
+it cover all history method
+import { useNavigate } from "react-router-dom";
+import order is important
+import { initializeApp } from "firebase/app";
+import {
+getAuth,
+GoogleAuthProvider,
+signInWithPopup,
+} from "firebase/auth";
+-it stay on the same page
+onAuthStateChanged,
 
-
+TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries
+import GoogleButton from "react-google-button";

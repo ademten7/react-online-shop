@@ -1,11 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { MyContext } from "../App";
 import "./Cart.scss";
 import { GiShoppingBag } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import PaypalComponent from "./PaypalComponent";
+import Button from "react-bootstrap/Button";
+import { Modal } from "react-bootstrap";
 
 const Cart = () => {
   const { products, setProducts, cart, setCart } = useContext(MyContext);
+  const [checkout, setCheckout] = useState(false);
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   let { quantity, setQuantity } = useContext(MyContext);
 
   const removeOne = (product) => {
@@ -66,6 +74,25 @@ const Cart = () => {
             </div>
           );
         })}
+        <div>
+          <Button variant="secondary" onClick={handleShow}>
+            Pay
+          </Button>
+
+          <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Contact Us</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <PaypalComponent />
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        </div>
       </div>
     </div>
   );
