@@ -53,7 +53,9 @@ function App() {
           <Navbar />
           <Routes>
             {/* no need exact keyword element with tag</> Routes give us exact path*/}
-            <Route path={"/" || "/home"} element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+
             <Route path="/login" element={<Login />} />
             <Route path="/profile" element={<Profile />} />
             {/* to see the product on the top with other products */}

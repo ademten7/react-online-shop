@@ -81,7 +81,7 @@ const Cart = () => {
 
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title>Contact Us</Modal.Title>
+              <Modal.Title>Pay</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <PaypalComponent />
