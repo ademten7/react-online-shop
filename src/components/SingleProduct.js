@@ -9,8 +9,8 @@ import ReactStars from "react-rating-stars-component";
 
 const SingleProduct = () => {
   //   const location = useLocation();
-  //import all products
   const params = useParams();
+  //import all products
   const { products } = useContext(MyContext);
 
   let Item = products.find((item) => item.id == params.id);

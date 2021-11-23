@@ -7,7 +7,7 @@ import { FaSearch } from "react-icons/fa";
 import { GiShoppingCart } from "react-icons/gi";
 
 const Navbar = () => {
-  const { user, setUser, quantity } = useContext(MyContext);
+  const { user, quantity } = useContext(MyContext);
   return (
     <div className="container head-nav ">
       <div className="logo">
@@ -20,8 +20,9 @@ const Navbar = () => {
           {user ? (
             <li>
               <NavLink
-                className="links"
-                activeClassName="myActiveClass"
+                className={(node) =>
+                  node.isActive ? "myActiveClass" : "myNotActiveClass"
+                }
                 to="/profile"
               >
                 Profile
@@ -30,8 +31,9 @@ const Navbar = () => {
           ) : (
             <li>
               <NavLink
-                className="links"
-                activeClassName="myActiveClass"
+                className={(node) =>
+                  node.isActive ? "myActiveClass" : "myNotActiveClass"
+                }
                 to="/login"
               >
                 Login
@@ -40,14 +42,20 @@ const Navbar = () => {
           )}
 
           <li>
-            <NavLink className="links" activeClassName="myActiveClass" to="/">
+            <NavLink
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
+              to="/"
+            >
               Home
             </NavLink>
           </li>
           <li>
             <NavLink
-              className="links"
-              activeClassName="myActiveClass"
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
               to="/products"
             >
               Products
@@ -55,8 +63,9 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              className="links"
-              activeClassName="myActiveClass"
+              className={(node) =>
+                node.isActive ? "myActiveClass" : "myNotActiveClass"
+              }
               to="/cart"
             >
               Cart
@@ -65,8 +74,9 @@ const Navbar = () => {
 
           <li className="contact">
             <NavLink
-              className="links"
-              activeClassName="myActiveClass"
+              className={(node) =>
+                node.isActive ? "contact-myActiveClass" : "myNotActiveClass"
+              }
               to="/contact"
             >
               Contact
