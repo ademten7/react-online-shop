@@ -46,7 +46,7 @@ const AddToCart=(product)=>{ //if this product already exist inside our cart let
               to={`/products/${product.id}`}
               // state={product}
             >
-              <img src={product.image} />
+              <img src={product.image} alt="product" />
               <h2 className="product-name">{product.title}</h2>
             </Link>
             <h2 className={product.price > 100 ? "discount" : "normal"}>

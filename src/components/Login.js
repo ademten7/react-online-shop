@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 //FROM FIREBASE
 // Import the functions you need from the SDKs you need
 //it cover all history method
@@ -25,7 +25,7 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDING_ID,
   appId: process.env.REACT_APP_APP_ID,
 };
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 const auth = getAuth();
 const googleProvider = new GoogleAuthProvider();

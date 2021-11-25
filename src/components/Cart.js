@@ -8,8 +8,7 @@ import Button from "react-bootstrap/Button";
 import { Modal } from "react-bootstrap";
 
 const Cart = () => {
-  const { products, setProducts, cart, setCart } = useContext(MyContext);
-  const [checkout, setCheckout] = useState(false);
+  const { cart, setCart } = useContext(MyContext);
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);

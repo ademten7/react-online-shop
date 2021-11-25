@@ -13,7 +13,7 @@ const SingleProduct = () => {
   //import all products
   const { products } = useContext(MyContext);
 
-  let Item = products.find((item) => item.id == params.id);
+  let Item = products.find((item) => Number(item.id) === Number(params.id));
   //id from product is number but id from App is string we dont need to check types === thats why we used ==
   //id===> coming from Route path from App.js
 
